@@ -1,0 +1,200 @@
+2019-08-01 19:53:19,708 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-08-01 19:53:36,153 [ERROR]  Encountered an exception while running action 'action_weather'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2019-08-01 19:55:59,780 [ERROR]  Encountered an exception while running action 'action_weather'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2019-08-01 19:56:06,138 [INFO ]  Killing Sanic server now.
+2019-08-01 21:07:41,742 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-08-01 21:07:50,219 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/sanic/app.py", line 1096, in run
+    serve(**server_settings)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/sanic/server.py", line 742, in serve
+    trigger_events(before_start, loop)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/sanic/server.py", line 604, in trigger_events
+    loop.run_until_complete(result)
+  File "uvloop/loop.pyx", line 1445, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1438, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1347, in uvloop.loop.Loop.run_forever
+  File "uvloop/loop.pyx", line 487, in uvloop.loop.Loop._run
+  File "uvloop/loop.pyx", line 404, in uvloop.loop.Loop._on_idle
+  File "uvloop/cbhandles.pyx", line 66, in uvloop.loop.Handle._run
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/core/run.py", line 199, in load_agent_on_start
+    _interpreter = NaturalLanguageInterpreter.create(nlu_model, endpoints.nlu)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/core/interpreter.py", line 53, in create
+    return RasaNLUInterpreter(model_directory=obj)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/core/interpreter.py", line 250, in __init__
+    self._load_interpreter()
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/core/interpreter.py", line 270, in _load_interpreter
+    self.interpreter = Interpreter.load(self.model_directory)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/nlu/model.py", line 301, in load
+    return Interpreter.create(model_metadata, component_builder, skip_validation)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/nlu/model.py", line 328, in create
+    component_meta, model_metadata.model_dir, model_metadata, **context
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/nlu/components.py", line 433, in load_component
+    component_meta, model_dir, model_metadata, cached_component, **context
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/nlu/registry.py", line 181, in load_component_by_meta
+    component_meta, model_dir, metadata, cached_component, **kwargs
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/nlu/utils/spacy_utils.py", line 143, in load
+    nlp = cls.load_model(model_name)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/nlu/utils/spacy_utils.py", line 47, in load_model
+    return spacy.load(spacy_model_name, disable=["parser"])
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/__init__.py", line 27, in load
+    return util.load_model(name, **overrides)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/util.py", line 132, in load_model
+    return load_model_from_link(name, **overrides)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/util.py", line 149, in load_model_from_link
+    return cls.load(**overrides)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/data/en/__init__.py", line 12, in load
+    return load_model_from_init_py(__file__, **overrides)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/util.py", line 193, in load_model_from_init_py
+    return load_model_from_path(data_path, meta, **overrides)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/util.py", line 176, in load_model_from_path
+    return nlp.from_disk(model_path)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/language.py", line 811, in from_disk
+    util.from_disk(path, deserializers, exclude)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/util.py", line 633, in from_disk
+    reader(path / key)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/language.py", line 800, in <lambda>
+    deserializers["vocab"] = lambda p: self.vocab.from_disk(p) and _fix_pretrained_vectors_name(self)
+  File "vocab.pyx", line 455, in spacy.vocab.Vocab.from_disk
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/_ml.py", line 296, in link_vectors_to_models
+    word.rank = vectors.key2row[word.orth]
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/engineio/client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-08-01 21:08:41,000 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-08-01 21:08:55,599 [INFO ]  Killing Sanic server now.
+2019-08-01 21:08:55,600 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/sanic/app.py", line 1096, in run
+    serve(**server_settings)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/sanic/server.py", line 742, in serve
+    trigger_events(before_start, loop)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/sanic/server.py", line 604, in trigger_events
+    loop.run_until_complete(result)
+  File "uvloop/loop.pyx", line 1445, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1438, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1347, in uvloop.loop.Loop.run_forever
+  File "uvloop/loop.pyx", line 487, in uvloop.loop.Loop._run
+  File "uvloop/loop.pyx", line 404, in uvloop.loop.Loop._on_idle
+  File "uvloop/cbhandles.pyx", line 66, in uvloop.loop.Handle._run
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/core/run.py", line 199, in load_agent_on_start
+    _interpreter = NaturalLanguageInterpreter.create(nlu_model, endpoints.nlu)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/core/interpreter.py", line 53, in create
+    return RasaNLUInterpreter(model_directory=obj)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/core/interpreter.py", line 250, in __init__
+    self._load_interpreter()
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/core/interpreter.py", line 270, in _load_interpreter
+    self.interpreter = Interpreter.load(self.model_directory)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/nlu/model.py", line 301, in load
+    return Interpreter.create(model_metadata, component_builder, skip_validation)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/nlu/model.py", line 328, in create
+    component_meta, model_metadata.model_dir, model_metadata, **context
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/nlu/components.py", line 433, in load_component
+    component_meta, model_dir, model_metadata, cached_component, **context
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/nlu/registry.py", line 181, in load_component_by_meta
+    component_meta, model_dir, metadata, cached_component, **kwargs
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/nlu/utils/spacy_utils.py", line 143, in load
+    nlp = cls.load_model(model_name)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/nlu/utils/spacy_utils.py", line 47, in load_model
+    return spacy.load(spacy_model_name, disable=["parser"])
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/__init__.py", line 27, in load
+    return util.load_model(name, **overrides)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/util.py", line 132, in load_model
+    return load_model_from_link(name, **overrides)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/util.py", line 149, in load_model_from_link
+    return cls.load(**overrides)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/data/en/__init__.py", line 12, in load
+    return load_model_from_init_py(__file__, **overrides)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/util.py", line 193, in load_model_from_init_py
+    return load_model_from_path(data_path, meta, **overrides)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/util.py", line 176, in load_model_from_path
+    return nlp.from_disk(model_path)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/language.py", line 811, in from_disk
+    util.from_disk(path, deserializers, exclude)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/util.py", line 633, in from_disk
+    reader(path / key)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/language.py", line 800, in <lambda>
+    deserializers["vocab"] = lambda p: self.vocab.from_disk(p) and _fix_pretrained_vectors_name(self)
+  File "vocab.pyx", line 455, in spacy.vocab.Vocab.from_disk
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/_ml.py", line 294, in link_vectors_to_models
+    for word in vocab:
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/engineio/client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-08-01 21:16:13,588 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-08-01 21:16:25,541 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-08-02 13:16:37,677 [INFO ]  Killing Sanic server now.
+2019-08-02 14:03:24,006 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-08-02 14:03:36,019 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-08-02 14:06:12,774 [INFO ]  Killing Sanic server now.
+2019-08-02 14:06:18,695 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-08-02 14:06:30,896 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-08-02 14:07:58,842 [INFO ]  Killing Sanic server now.
+2019-08-02 14:10:28,788 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-08-02 14:10:37,159 [INFO ]  Killing Sanic server now.
+2019-08-02 14:10:37,160 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/sanic/app.py", line 1096, in run
+    serve(**server_settings)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/sanic/server.py", line 742, in serve
+    trigger_events(before_start, loop)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/sanic/server.py", line 604, in trigger_events
+    loop.run_until_complete(result)
+  File "uvloop/loop.pyx", line 1445, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1438, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1347, in uvloop.loop.Loop.run_forever
+  File "uvloop/loop.pyx", line 487, in uvloop.loop.Loop._run
+  File "uvloop/loop.pyx", line 404, in uvloop.loop.Loop._on_idle
+  File "uvloop/cbhandles.pyx", line 66, in uvloop.loop.Handle._run
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/core/run.py", line 199, in load_agent_on_start
+    _interpreter = NaturalLanguageInterpreter.create(nlu_model, endpoints.nlu)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/core/interpreter.py", line 53, in create
+    return RasaNLUInterpreter(model_directory=obj)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/core/interpreter.py", line 250, in __init__
+    self._load_interpreter()
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/core/interpreter.py", line 270, in _load_interpreter
+    self.interpreter = Interpreter.load(self.model_directory)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/nlu/model.py", line 301, in load
+    return Interpreter.create(model_metadata, component_builder, skip_validation)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/nlu/model.py", line 328, in create
+    component_meta, model_metadata.model_dir, model_metadata, **context
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/nlu/components.py", line 433, in load_component
+    component_meta, model_dir, model_metadata, cached_component, **context
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/nlu/registry.py", line 181, in load_component_by_meta
+    component_meta, model_dir, metadata, cached_component, **kwargs
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/nlu/utils/spacy_utils.py", line 143, in load
+    nlp = cls.load_model(model_name)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/rasa/nlu/utils/spacy_utils.py", line 47, in load_model
+    return spacy.load(spacy_model_name, disable=["parser"])
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/__init__.py", line 27, in load
+    return util.load_model(name, **overrides)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/util.py", line 132, in load_model
+    return load_model_from_link(name, **overrides)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/util.py", line 149, in load_model_from_link
+    return cls.load(**overrides)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/data/en/__init__.py", line 12, in load
+    return load_model_from_init_py(__file__, **overrides)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/util.py", line 193, in load_model_from_init_py
+    return load_model_from_path(data_path, meta, **overrides)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/util.py", line 176, in load_model_from_path
+    return nlp.from_disk(model_path)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/language.py", line 811, in from_disk
+    util.from_disk(path, deserializers, exclude)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/util.py", line 633, in from_disk
+    reader(path / key)
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/language.py", line 800, in <lambda>
+    deserializers["vocab"] = lambda p: self.vocab.from_disk(p) and _fix_pretrained_vectors_name(self)
+  File "vocab.pyx", line 453, in spacy.vocab.Vocab.from_disk
+  File "vectors.pyx", line 431, in spacy.vectors.Vectors.from_disk
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/spacy/util.py", line 628, in from_disk
+    def from_disk(path, readers, exclude):
+  File "/home/ramaswamym/RAM/RASA/new_wbot/bot1/lib/python3.6/site-packages/engineio/client.py", line 41, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-08-02 14:17:22,409 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-08-02 14:17:34,362 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-08-02 14:17:55,655 [ERROR]  Encountered an exception while running action 'action_weather'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2019-08-02 14:20:21,532 [INFO ]  Killing Sanic server now.
+2019-08-02 14:21:06,413 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-08-02 14:21:18,647 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-08-02 14:59:17,813 [INFO ]  Starting Rasa server on http://localhost:5005
